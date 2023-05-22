@@ -17,6 +17,7 @@ final defaultTheme = ThemeData(
   listTileTheme: _listTileTheme,
   primaryColor: Colors.green,
   primarySwatch: colors.materialSwatch,
+  progressIndicatorTheme: _progressIndicatorTheme,
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
 
@@ -52,4 +53,8 @@ const _listTileTheme = ListTileThemeData(
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.all(borderRaduisDefault),
   ),
+);
+
+const _progressIndicatorTheme = ProgressIndicatorThemeData(
+  color: Colors.green,
 );

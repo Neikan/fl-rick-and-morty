@@ -32,30 +32,24 @@ class _RMCharactersListState extends State<_RMCharactersList> {
       );
     }
 
+    final length = widget.characters.data.length;
+    final currentPage = widget.characters.currentPage;
+    final pages = widget.characters.pages;
+
     return RMRefresh(
       onRefresh: widget.onRefresh,
-      child: Stack(
-        children: [
-          ListView.builder(
-            padding: spaces.p1,
-            physics: const BouncingScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics(),
-            ),
-            itemCount: widget.characters.data.length,
-            itemBuilder: (_, index) {
-              return _RMCharacterCard(
+      child: ListView.builder(
+        padding: spaces.p1,
+        physics: const BouncingScrollPhysics(
+          parent: AlwaysScrollableScrollPhysics(),
+        ),
+        itemCount: currentPage < pages ? length + 1 : length,
+        itemBuilder: (_, index) => index >= length
+            ? const RMLoader(size: sizeRMLoaderNext)
+            : _RMCharacterCard(
                 character: widget.characters.data[index],
-              );
-            },
-            controller: _scrollController,
-          ),
-          Positioned(
-            bottom: 0.0,
-            child: RMLoaderNext(
-              isLoading: widget.characters.isLoadingNextData,
-            ),
-          ),
-        ],
+              ),
+        controller: _scrollController,
       ),
     );
   }

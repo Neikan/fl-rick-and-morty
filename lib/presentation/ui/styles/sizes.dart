@@ -5,4 +5,5 @@ const double sizeErrorData = 130.0;
 const double sizeErrorImage = 48.0;
 
 const double sizeRMIcon = 32.0;
-const double sizeRMLoader = 32.0;
+
+const double sizeRMLoaderNext = 24.0;

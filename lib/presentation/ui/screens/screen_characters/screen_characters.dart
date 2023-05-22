@@ -17,8 +17,8 @@ import 'package:rick_and_morty_app/presentation/ui/components/rm_app_bar.dart';
 import 'package:rick_and_morty_app/presentation/ui/components/rm_character_avatar/rm_character_avatar.dart';
 import 'package:rick_and_morty_app/presentation/ui/components/rm_data_empty.dart';
 import 'package:rick_and_morty_app/presentation/ui/components/rm_loader.dart';
-import 'package:rick_and_morty_app/presentation/ui/components/rm_loader_next.dart';
 import 'package:rick_and_morty_app/presentation/ui/components/rm_refresh.dart';
+import 'package:rick_and_morty_app/presentation/ui/styles/sizes.dart';
 
 import 'package:rick_and_morty_app/presentation/ui/styles/spaces.dart'
     as spaces;
